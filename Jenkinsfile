@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run Newman') {
             steps {
-                sh 'newman run ./fileupload_coll.json  -g ./workspace.postman_globals.json -n 3 -r htmlextra,cli'
+                sh 'newman run ./fileupload_coll.json  -g ./workspace.postman_globals.json -n 3 -r htmlextra,cli --reporter-htmlextra-export ./results/report.html'
             }
         }
         stage('Publish HTML Extra Report'){
