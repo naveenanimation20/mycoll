@@ -16,8 +16,8 @@ pipeline {
                      publishHTML([allowMissing: false,
                                   alwaysLinkToLastBuild: false, 
                                   keepAll: true, 
-                                  reportDir: 'newman', 
-                                  reportFiles: '*.html', 
+                                  reportDir: 'results', 
+                                  reportFiles: 'report.html', 
                                   reportName: 'HTML Extra PL Report', 
                                   reportTitles: ''])
             }
